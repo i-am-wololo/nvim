@@ -4,14 +4,14 @@ require('richpresence');
 require('bar');
 require('lsp');
 require('start');
-
+require('theme');
 
 vim.wo.number = true
 vim.o.clipboard = "unnamedplus"
 
 
 require('Comment').setup()
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme tokyonight")
 
 
 -- hack to disable semantics for every lsp
@@ -60,8 +60,9 @@ return require('packer').startup(function(use)
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
-	
-	use 'ms-jpq/coq_nvim'
+	use {'ms-jpq/coq_nvim', branch = 'coq'}
+	use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+	use {'ms-jpq/coq.thirdparty', branch = '3p'}
 	use 'neovim/nvim-lspconfig'
 
   if packer_bootstrap then

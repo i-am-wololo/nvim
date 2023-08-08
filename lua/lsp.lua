@@ -1,6 +1,9 @@
 local lsp = require "lspconfig"
 local coq = require "coq" -- add this
 
+vim.cmd('COQnow --shut-up')
+
+-- lua lsp --
 lsp.lua_ls.setup( coq.lsp_ensure_capabilities{
   settings = {
     Lua = {
@@ -23,4 +26,7 @@ lsp.lua_ls.setup( coq.lsp_ensure_capabilities{
     },
   },
 })
+
+-- jedi lsp (python) --
+require'lspconfig'.jedi_language_server.setup(coq.lsp_ensure_capabilities{})
 
