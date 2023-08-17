@@ -1,10 +1,13 @@
+require('plugins')
 require('keybinds');
 require('indent');
+require('tabs');
 require('richpresence');
 require('bar');
 require('lsp');
 require('start');
 require('theme');
+require('neovide');
 
 vim.wo.number = true
 vim.o.clipboard = "unnamedplus"
@@ -31,41 +34,3 @@ end
 
 local packer_bootstrap = ensure_packer()
 -- packer packages
-return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
-	use 'andweeb/presence.nvim'
-	use {
-		'numToStr/Comment.nvim',
-		config = function()
-		require('Comment').setup()
-    		end
-	}
-	use {
-		"startup-nvim/startup.nvim",
-		requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-		config = function()
-		require"startup".setup()
-  	end
-}
-	use 'ms-jpq/chadtree'
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.2',
-	-- or                            , branch = '0.1.x',
-  		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-	use 'folke/tokyonight.nvim'
-	use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	}
-	use {'ms-jpq/coq_nvim', branch = 'coq'}
-	use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
-	use {'ms-jpq/coq.thirdparty', branch = '3p'}
-	use 'neovim/nvim-lspconfig'
-
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
