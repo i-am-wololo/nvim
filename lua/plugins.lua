@@ -14,6 +14,17 @@ local packer_bootstrap = ensure_packer()
 -- packer packages
 require('packer').reset()
 return require('packer').startup(function(use)
+	use {
+    		"nvim-neorg/neorg",
+    		run = ":Neorg sync-parsers", -- This is the important bit!
+    		config = function()
+        	require("neorg").setup {
+			load = {
+        			["core.defaults"] = {}
+    			}
+        	}
+    		end,
+	}
 	use 'wbthomason/packer.nvim'
 	use 'andweeb/presence.nvim'
 	use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
