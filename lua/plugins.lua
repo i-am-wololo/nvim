@@ -27,9 +27,16 @@ return require('packer').startup(function(use)
 	}
 	use 'wbthomason/packer.nvim'
 	use 'andweeb/presence.nvim'
-	use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-	use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+	use 'nvim-tree/nvim-web-devicons'
+	use 'lewis6991/gitsigns.nvim'
 	use 'romgrk/barbar.nvim'
+	use({
+    		"kdheepak/lazygit.nvim",
+    		-- optional for floating window border decoration
+    		requires = {
+    		    "nvim-lua/plenary.nvim",
+    },
+})
 	use {
 		'numToStr/Comment.nvim',
 		config = function()
@@ -60,6 +67,10 @@ return require('packer').startup(function(use)
 	use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 	use {'ms-jpq/coq.thirdparty', branch = '3p'}
 	use 'neovim/nvim-lspconfig'
+    	use {
+      		'stevearc/oil.nvim',
+		config = function() require('oil').setup() end
+		}
 
   if packer_bootstrap then
     require('packer').sync()

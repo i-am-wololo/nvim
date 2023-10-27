@@ -1,3 +1,4 @@
+require("oil").setup()
 require('plugins')
 require('keybinds');
 require('indent');
@@ -8,11 +9,15 @@ require('lsp');
 require('start');
 require('theme');
 require('neovide');
+require('gui');
+
+
 
 vim.wo.number = true
 vim.o.clipboard = "unnamedplus"
+vim.opt.ignorecase = true
 
-
+require('gitsigns').setup()
 require('Comment').setup()
 vim.cmd("colorscheme tokyonight")
 
@@ -20,6 +25,9 @@ vim.cmd("colorscheme tokyonight")
 -- hack to disable semantics for every lsp
 vim.api.nvim_create_autocmd("LspAttach", { callback = function(args) local client = vim.lsp.get_client_by_id(args.data.client_id) client.server_capabilities.semanticTokensProvider = nil end, });
 
+-- packer bootstrap --
+
+-- packer packages
 -- packer bootstrap --
 local ensure_packer = function()
   local fn = vim.fn
@@ -33,4 +41,4 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
--- packer packages
+
