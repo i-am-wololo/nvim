@@ -6,11 +6,16 @@ vim.keymap.set({'n','v'}, 'k','<Down>')
 vim.keymap.set({'n','v'},'l', '<Up>')
 vim.keymap.set({'n','v'},'m', '<Right>')
 
--- moving windows --
+-- moving window focus --
 vim.keymap.set({'n','v',},'<S-j>', '<C-w>h')
 vim.keymap.set({'n','v'}, '<S-k>','<C-w>j')
 vim.keymap.set({'n','v'},'<S-l>', '<C-w>k')
 vim.keymap.set({'n','v'},'<S-m>', '<C-w>l')
+-- moving windows --
+vim.keymap.set({'n','v'}, '<A-j>', '<C-W><S-h>')
+vim.keymap.set({'n','v'}, '<A-k>', '<C-W><S-j>')
+vim.keymap.set({'n','v'}, '<A-l>', '<C-W><S-k>')
+vim.keymap.set({'n','v'}, '<A-m>', '<C-W><S-l>')
 
 -- CHADtree
 vim.keymap.set({'n','v'}, '<Leader>n', "<cmd>CHADopen<cr>")
@@ -24,3 +29,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- lazygit --
 vim.keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>')
+
+-- nabla.nvim --
+-- vim.keymap.set('n', '<leader>p', require('nabla').popup())

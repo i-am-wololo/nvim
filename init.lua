@@ -1,5 +1,6 @@
-require("oil").setup()
-require('plugins')
+require('plugins');
+require('oilconfig');
+require('neorgcfg');
 require('keybinds');
 require('indent');
 require('tabs');
@@ -10,6 +11,7 @@ require('start');
 require('theme');
 require('neovide');
 require('gui');
+require('latex');
 
 
 

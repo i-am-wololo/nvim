@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
     		end,
 	}
 	use 'wbthomason/packer.nvim'
+	use 'jbyuki/nabla.nvim'
 	use 'andweeb/presence.nvim'
 	use 'nvim-tree/nvim-web-devicons'
 	use 'lewis6991/gitsigns.nvim'
@@ -47,8 +48,8 @@ return require('packer').startup(function(use)
 		"startup-nvim/startup.nvim",
 		requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
 		config = function()
-		require"startup".setup()
-  	end
+			require"startup".setup()
+  		end
 }
 	use 'ms-jpq/chadtree'
 	use {
