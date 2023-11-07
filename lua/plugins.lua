@@ -29,15 +29,16 @@ return require('packer').startup(function(use)
 	use 'jbyuki/nabla.nvim'
 	use 'andweeb/presence.nvim'
 	use 'nvim-tree/nvim-web-devicons'
-	use 'lewis6991/gitsigns.nvim'
+	use 'elkowar/yuck.vim'
 	use 'romgrk/barbar.nvim'
-	use({
+	use 'lewis6991/gitsigns.nvim'
+	use{
     		"kdheepak/lazygit.nvim",
     		-- optional for floating window border decoration
     		requires = {
     		    "nvim-lua/plenary.nvim",
-    },
-})
+    		},
+	}
 	use {
 		'numToStr/Comment.nvim',
 		config = function()
@@ -46,12 +47,20 @@ return require('packer').startup(function(use)
 	}
 	use {
 		"startup-nvim/startup.nvim",
-		requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-		config = function()
-			require"startup".setup()
-  		end
-}
+		requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"}
+		}
 	use 'ms-jpq/chadtree'
+	use {
+ 		 "amrbashir/nvim-docs-view",
+ 		 opt = true,
+ 		 cmd = { "DocsViewToggle" },
+ 		 config = function()
+ 		   require("docs-view").setup {
+ 		     position = "right",
+ 		     width = 60,
+ 		   }
+ 		 end
+	}
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 	-- or                            , branch = '0.1.x',

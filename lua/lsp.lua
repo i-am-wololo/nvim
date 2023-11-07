@@ -30,8 +30,11 @@ lsp.lua_ls.setup( coq.lsp_ensure_capabilities{
 -- jedi lsp (python) --
 require'lspconfig'.jedi_language_server.setup(coq.lsp_ensure_capabilities{})
 
+-- xml lsp --
+require'lspconfig'.lemminx.setup(coq.lsp_ensure_capabilities{})
+
 -- C# lsp --
-require'lspconfig'.omnisharp.setup {
+require'lspconfig'.omnisharp.setup(coq.lsp_ensure_capabilities{
     cmd = { "dotnet", "/path/to/omnisharp/OmniSharp.dll" },
 
     -- Enables support for reading code style, naming convention and analyzer
@@ -68,4 +71,9 @@ require'lspconfig'.omnisharp.setup {
     -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
     -- true
     analyze_open_documents_only = true,
-}
+})
+-- crystal lsp crystalline --
+require'lspconfig'.crystalline.setup(coq.lsp_ensure_capabilities{})
+-- laTEX --
+
+-- Markdown --

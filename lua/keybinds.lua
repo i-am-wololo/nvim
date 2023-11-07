@@ -30,5 +30,5 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 -- lazygit --
 vim.keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>')
 
--- nabla.nvim --
--- vim.keymap.set('n', '<leader>p', require('nabla').popup())
+-- docs view --
+vim.keymap.set('n', '<leader>ds', '<cmd>DocsViewToggle<CR>')
