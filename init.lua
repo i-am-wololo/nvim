@@ -21,7 +21,7 @@ vim.opt.ignorecase = true
 
 require('Comment').setup()
 vim.cmd("colorscheme tokyonight")
-require('gitsigns').setup()
+-- require('gitsigns').setup()
 
 vim.opt = {
 	tabstop = 1
