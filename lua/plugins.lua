@@ -14,24 +14,20 @@ local packer_bootstrap = ensure_packer()
 -- packer packages
 require('packer').reset()
 return require('packer').startup(function(use)
-	use {
-    		"nvim-neorg/neorg",
-    		run = ":Neorg sync-parsers", -- This is the important bit!
-    		config = function()
-        	require("neorg").setup {
-			load = {
-        			["core.defaults"] = {}
-    			}
-        	}
-    		end,
-	}
 	use 'wbthomason/packer.nvim'
-	use 'jbyuki/nabla.nvim'
+	use {
+	    "williamboman/mason.nvim",
+	    "williamboman/mason-lspconfig.nvim",
+	}
 	use 'andweeb/presence.nvim'
+	use {'kaarmu/typst.vim', ft = {'typst'}}
+	use 'mfussenegger/nvim-dap'
 	use 'nvim-tree/nvim-web-devicons'
 	use 'elkowar/yuck.vim'
+	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 	use 'romgrk/barbar.nvim'
 	use 'lewis6991/gitsigns.nvim'
+	use { "catppuccin/nvim", as = "catppuccin" }
 	use{
     		"kdheepak/lazygit.nvim",
     		-- optional for floating window border decoration
@@ -67,7 +63,6 @@ return require('packer').startup(function(use)
   		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-	use 'folke/tokyonight.nvim'
 	use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 	use {
 		'nvim-lualine/lualine.nvim',

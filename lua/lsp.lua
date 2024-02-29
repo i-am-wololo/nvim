@@ -77,3 +77,16 @@ require'lspconfig'.crystalline.setup(coq.lsp_ensure_capabilities{})
 -- laTEX --
 
 -- Markdown --
+
+-- Typst --
+require'lspconfig'.typst_lsp.setup(coq.lsp_ensure_capabilities{
+	root_dir = require'lspconfig'.util.root_pattern('*typ')
+})
+
+-- Gopls --
+require'lspconfig'.gopls.setup(coq.lsp_ensure_capabilities{})
+
+-- Rust --
+require'lspconfig'.rust_analyzer.setup(coq.lsp_ensure_capabilities{})
+
+require'lspconfig'.emmet_language_server.setup(coq.lsp_ensure_capabilities{})

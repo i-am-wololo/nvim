@@ -1,6 +1,6 @@
 require('plugins');
 require('oilconfig');
-require('neorgcfg');
+-- require('neorgcfg');
 require('keybinds');
 require('indent');
 require('tabs');
@@ -12,7 +12,9 @@ require('theme');
 require('neovide');
 require('gui');
 require('latex');
-
+require('vimtexconfig');
+require("mason").setup()
+require("mason-lspconfig").setup()
 
 
 vim.wo.number = true
@@ -20,7 +22,6 @@ vim.o.clipboard = "unnamedplus"
 vim.opt.ignorecase = true
 
 require('Comment').setup()
-vim.cmd("colorscheme tokyonight")
 -- require('gitsigns').setup()
 
 vim.opt = {
