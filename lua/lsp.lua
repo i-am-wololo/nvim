@@ -89,4 +89,8 @@ require'lspconfig'.gopls.setup(coq.lsp_ensure_capabilities{})
 -- Rust --
 require'lspconfig'.rust_analyzer.setup(coq.lsp_ensure_capabilities{})
 
+-- emmet --
 require'lspconfig'.emmet_language_server.setup(coq.lsp_ensure_capabilities{})
+
+-- asm --
+require'lspconfig'.asm_lsp.setup(coq.lsp_ensure_capabilities{})
