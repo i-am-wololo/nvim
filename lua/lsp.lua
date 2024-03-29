@@ -93,4 +93,6 @@ require'lspconfig'.rust_analyzer.setup(coq.lsp_ensure_capabilities{})
 require'lspconfig'.emmet_language_server.setup(coq.lsp_ensure_capabilities{})
 
 -- asm --
-require'lspconfig'.asm_lsp.setup(coq.lsp_ensure_capabilities{})
+require'lspconfig'.asm_lsp.setup(coq.lsp_ensure_capabilities{
+	root_dir = require'lspconfig'.util.root_pattern('*asm')
+})
