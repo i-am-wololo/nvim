@@ -1,5 +1,14 @@
-local lsp = require "lspconfig"
+
 local coq = require "coq" -- add this
+local lsp = require "lspconfig"
+
+
+-- ensure LSPs are installed
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { "lua_ls", "rust_analyzer", "jedi_language_server", "lemminx", "gopls", },
+}
+
 
 vim.cmd('COQnow --shut-up')
 

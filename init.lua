@@ -13,14 +13,11 @@ require('neovide');
 require('gui');
 require('latex');
 require('vimtexconfig');
-require("mason").setup()
-require("mason-lspconfig").setup()
-
 
 vim.wo.number = true
 vim.o.clipboard = "unnamedplus"
 vim.opt.ignorecase = true
-
+vim.cmd("au BufWritePost * lua require('lint').try_lint()")
 require('Comment').setup()
 -- require('gitsigns').setup()
 

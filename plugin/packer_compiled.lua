@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mehdi/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/mehdi/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/mehdi/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/mehdi/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mehdi/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
+local package_path_str = "/home/mehdibenahmed/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?.lua;/home/mehdibenahmed/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?/init.lua;/home/mehdibenahmed/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?.lua;/home/mehdibenahmed/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mehdibenahmed/.cache/nvim/packer_hererocks/2.1.1707061634/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -77,72 +77,72 @@ _G.packer_plugins = {
   ["Comment.nvim"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   ["barbar.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
   catppuccin = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/catppuccin",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
   chadtree = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/chadtree",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/chadtree",
     url = "https://github.com/ms-jpq/chadtree"
   },
   ["coq.artifacts"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/coq.artifacts",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/coq.artifacts",
     url = "https://github.com/ms-jpq/coq.artifacts"
   },
   ["coq.thirdparty"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/coq.thirdparty",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/coq.thirdparty",
     url = "https://github.com/ms-jpq/coq.thirdparty"
   },
   coq_nvim = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/coq_nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/coq_nvim",
     url = "https://github.com/ms-jpq/coq_nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lazygit.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-dap-ui"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
   },
   ["nvim-docs-view"] = {
@@ -151,75 +151,75 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/opt/nvim-docs-view",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/opt/nvim-docs-view",
     url = "https://github.com/amrbashir/nvim-docs-view"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-ufo"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/nvim-ufo",
     url = "https://github.com/kevinhwang91/nvim-ufo"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["oil.nvim"] = {
     config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0" },
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/oil.nvim",
     url = "https://github.com/stevearc/oil.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["presence.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/presence.nvim",
     url = "https://github.com/andweeb/presence.nvim"
   },
   ["promise-async"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/promise-async",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/promise-async",
     url = "https://github.com/kevinhwang91/promise-async"
   },
   ["startup.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/startup.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/startup.nvim",
     url = "https://github.com/startup-nvim/startup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["typst.vim"] = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/opt/typst.vim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/opt/typst.vim",
     url = "https://github.com/kaarmu/typst.vim"
   },
   ["yuck.vim"] = {
     loaded = true,
-    path = "/home/mehdi/.local/share/nvim/site/pack/packer/start/yuck.vim",
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/yuck.vim",
     url = "https://github.com/elkowar/yuck.vim"
   }
 }
@@ -253,9 +253,9 @@ vim.cmd [[au FileType typst ++once lua require("packer.load")({'typst.vim'}, { f
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/mehdi/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
-vim.cmd [[source /home/mehdi/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
-time([[Sourcing ftdetect script at: /home/mehdi/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
+time([[Sourcing ftdetect script at: /home/mehdibenahmed/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
+vim.cmd [[source /home/mehdibenahmed/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
+time([[Sourcing ftdetect script at: /home/mehdibenahmed/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false

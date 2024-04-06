@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
 	use {'kaarmu/typst.vim', ft = {'typst'}}
 	use 'mfussenegger/nvim-dap'
 	use 'nvim-tree/nvim-web-devicons'
+	use 'mfussenegger/nvim-lint'
 	use 'elkowar/yuck.vim'
 	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 	use 'romgrk/barbar.nvim'
