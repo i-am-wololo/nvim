@@ -20,12 +20,15 @@ return require('packer').startup(function(use)
 	    "williamboman/mason-lspconfig.nvim",
 	}
 	use 'andweeb/presence.nvim'
+	use "folke/trouble.nvim"
 	use {'kaarmu/typst.vim', ft = {'typst'}}
-	use 'mfussenegger/nvim-dap'
+	use { "ellisonleao/gruvbox.nvim" }
+  	use { 'michaelb/sniprun', run = 'sh ./install.sh'}
+    	use "jay-babu/mason-nvim-dap.nvim"
 	use 'nvim-tree/nvim-web-devicons'
 	use 'mfussenegger/nvim-lint'
 	use 'elkowar/yuck.vim'
-	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 	use 'romgrk/barbar.nvim'
 	use 'lewis6991/gitsigns.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }

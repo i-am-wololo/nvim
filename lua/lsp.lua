@@ -105,3 +105,14 @@ require'lspconfig'.emmet_language_server.setup(coq.lsp_ensure_capabilities{})
 require'lspconfig'.asm_lsp.setup(coq.lsp_ensure_capabilities{
 	root_dir = require'lspconfig'.util.root_pattern('*asm')
 })
+
+require'lspconfig'.clangd.setup(coq.lsp_ensure_capabilities{})
+
+
+
+-- cmake lsp --
+require'lspconfig'.neocmake.setup(coq.lsp_ensure_capabilities{})
+
+
+-- meson lsp --
+require'lspconfig'.mesonlsp.setup(coq.lsp_ensure_capabilities{})

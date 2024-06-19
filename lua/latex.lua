@@ -9,4 +9,3 @@ end
 vim.cmd("autocmd BufRead,BufNewFile *.md lua renderMath()")
 
 -- For .txt files
-vim.cmd("autocmd BufRead,BufNewFile *.txt lua renderMath()")

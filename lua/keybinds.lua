@@ -8,7 +8,7 @@ vim.keymap.set({'n','v'},'l', '<Right>')
 
 -- moving window focus --
 vim.keymap.set({'n','v',},'<S-h>', '<C-w>h')
-vim.keymap.set({'n','v'}, '<S-j>','<C-w>h')
+vim.keymap.set({'n','v'}, '<S-j>','<C-w>j')
 vim.keymap.set({'n','v'},'<S-k>', '<C-w>k')
 vim.keymap.set({'n','v'},'<S-l>', '<C-w>l')
 -- moving windows --
@@ -32,3 +32,4 @@ vim.keymap.set('n', '<leader>g', '<cmd>LazyGit<CR>')
 
 -- docs view --
 vim.keymap.set('n', '<leader>ds', '<cmd>DocsViewToggle<CR>')
+require("coq")
