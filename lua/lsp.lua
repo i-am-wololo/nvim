@@ -116,3 +116,6 @@ require'lspconfig'.neocmake.setup(coq.lsp_ensure_capabilities{})
 
 -- meson lsp --
 require'lspconfig'.mesonlsp.setup(coq.lsp_ensure_capabilities{})
+
+-- zig lsp --
+require'lspconfig'.zls.setup{}

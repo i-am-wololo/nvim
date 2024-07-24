@@ -5,8 +5,9 @@ require('keybinds');
 require('indent');
 require('tabs');
 require('richpresence');
-require('bar');
+-- require('bar');
 require('lsp');
+require('lints');
 require('start');
 require('theme');
 require('neovide');
@@ -14,6 +15,7 @@ require('gui');
 require('latex');
 require('vimtexconfig');
 require('dapconfig');
+
 
 vim.wo.number = true
 vim.o.clipboard = "unnamedplus"
@@ -29,6 +31,5 @@ vim.opt = {
 -- custom SnipBlock command
 -- hack to disable semantics for every lsp
 vim.api.nvim_create_autocmd("LspAttach", { callback = function(args) local client = vim.lsp.get_client_by_id(args.data.client_id) client.server_capabilities.semanticTokensProvider = nil end, });
-
 
 

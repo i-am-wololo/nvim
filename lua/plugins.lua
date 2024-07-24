@@ -19,8 +19,13 @@ return require('packer').startup(function(use)
 	    "williamboman/mason.nvim",
 	    "williamboman/mason-lspconfig.nvim",
 	}
-	use 'andweeb/presence.nvim'
+    	use 'Bekaboo/deadcolumn.nvim'
+	use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
 	use "folke/trouble.nvim"
+	use 'IogaMaster/neocord'
 	use {'kaarmu/typst.vim', ft = {'typst'}}
 	use { "ellisonleao/gruvbox.nvim" }
   	use { 'michaelb/sniprun', run = 'sh ./install.sh'}
@@ -68,10 +73,7 @@ return require('packer').startup(function(use)
 	}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-	}
+
 	use {'ms-jpq/coq_nvim', branch = 'coq'}
 	use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
 	use {'ms-jpq/coq.thirdparty', branch = '3p'}

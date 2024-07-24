@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/coq_nvim",
     url = "https://github.com/ms-jpq/coq_nvim"
   },
+  ["deadcolumn.nvim"] = {
+    loaded = true,
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/deadcolumn.nvim",
+    url = "https://github.com/Bekaboo/deadcolumn.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -144,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  neocord = {
+    loaded = true,
+    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/neocord",
+    url = "https://github.com/IogaMaster/neocord"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -210,11 +220,6 @@ _G.packer_plugins = {
     path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
-  },
   ["promise-async"] = {
     loaded = true,
     path = "/home/mehdibenahmed/.local/share/nvim/site/pack/packer/start/promise-async",
@@ -255,14 +260,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: oil.nvim
-time([[Config for oil.nvim]], true)
-try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
-time([[Config for oil.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
