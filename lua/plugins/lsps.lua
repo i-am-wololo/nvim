@@ -1,11 +1,14 @@
 
 
-servers = {
+local servers = {
 	"zls",
-	"lua_ls"
+	"lua_ls",
+	"somesass_ls",
+	"emmet_language_server"
+
 }
 
-mason_lspconfig_opts = {
+local mason_lspconfig_opts = {
 	ensure_installed = servers
 }
 
@@ -27,12 +30,12 @@ return {
 		  },
 		  init = function()
 		    vim.g.coq_settings = {
-		        auto_start = true, -- if you want to start COQ at startup
+		        auto_start = 'shut-up', -- if you want to start COQ at startup
 		        -- Your COQ settings here
 		    }
 		  end,
 		  	config = function()
-				lspconfig = require('lspconfig')
+				local lspconfig = require('lspconfig')
 			   	for _, lsp in ipairs(servers) do
 	  				lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities({}))
 					end

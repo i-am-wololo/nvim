@@ -70,7 +70,8 @@ return {
 			require('mini.git').setup()
 			require("mini.pairs").setup()
 			require('mini.pick').setup()
-			require('mini.surround')
+			require('mini.surround').setup()
+			require('mini.sessions').setup()
 		end,
 	},
 }
