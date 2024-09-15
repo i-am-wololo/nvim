@@ -1,15 +1,14 @@
-local barbar_opts = {
-	separator = {left = "", right = "" }
-}
 
 return {
 	{
-		"rose-pine/neovim", name = "rose-pine", opts = rosepine_opts,
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
+    	"slugbyte/lackluster.nvim",
+    	lazy = false,
+    	priority = 1000,
+    	init = function()
+    	    vim.cmd.colorscheme("lackluster")
+    	    -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
+    	    -- vim.cmd.colorscheme("lackluster-mint")
+    	end,
 	},
 
 	{
@@ -18,7 +17,10 @@ return {
 		    section_separators = {left = "", right = ""}
 	    }},
 	    dependencies = { 'nvim-tree/nvim-web-devicons' },
-	    lazy = false
+	    lazy = false,
+	    opts = {
+			options = {theme = "lackluster"}
+		}
 	},
 	 {
 	  "kdheepak/lazygit.nvim",
@@ -46,7 +48,7 @@ return {
 	      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
 	    },
 	    init = function() vim.g.barbar_auto_setup = false end,
-	    opts = barbar_opts,
+	    opts = {},
 	    version = '^1.0.0', -- optional: only update when a new 1.x version is released
 	  },
 	{
@@ -62,5 +64,5 @@ return {
     	      indent = { enable = true },
     	    })
     	end
- 	}
+ 	},
 }

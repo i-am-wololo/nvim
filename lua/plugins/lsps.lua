@@ -4,41 +4,57 @@ local servers = {
 	"zls",
 	"lua_ls",
 	"somesass_ls",
-	"emmet_language_server"
+	"emmet_language_server",
+	"ast_grep",
+	"rust_analyzer",
+	"tinymist"
+
 
 }
+
+
 
 local mason_lspconfig_opts = {
 	ensure_installed = servers
 }
 
+
 return {
 	{
-		  "neovim/nvim-lspconfig",
-		  lazy = false,
-		  dependencies = {
-			{ "ms-jpq/coq_nvim", branch = "coq" },
-			{"williamboman/mason.nvim", lazy = false, priority = 900,
-			opts = {},
-			},
-			{"williamboman/mason-lspconfig.nvim",
-				opts = mason_lspconfig_opts,
-			},
-		    { "ms-jpq/coq.artifacts", branch = "artifacts" },
+		"williamboman/mason-lspconfig.nvim",
+		lazy = false,
+		priority = 990,
+		dependencies = {
+			{"williamboman/mason.nvim"},
+			{"neovim/nvim-lspconfig"},
+			{"ms-jpq/coq_nvim", branch = "coq" },
+    			{ "ms-jpq/coq.artifacts", branch = "artifacts" },
+			{ 'ms-jpq/coq.thirdparty', branch = "3p" }
+		},
+		init = function()
+			vim.g.coq_settings = {
+				auto_start = "shut-up"
+			}
+		end,
 
-		    { 'ms-jpq/coq.thirdparty', branch = "3p" }
-		  },
-		  init = function()
-		    vim.g.coq_settings = {
-		        auto_start = 'shut-up', -- if you want to start COQ at startup
-		        -- Your COQ settings here
-		    }
-		  end,
-		  	config = function()
-				local lspconfig = require('lspconfig')
-			   	for _, lsp in ipairs(servers) do
-	  				lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities({}))
-					end
-				end,
-			},
+		config = function()
+			coq = require("coq")
+			require("mason").setup()
+			require("mason-lspconfig").setup(mason_lspconfig_opts)
+
+			require("mason-lspconfig").setup_handlers {
+				function (server_name)
+					require("lspconfig")[server_name].setup(coq.lsp_ensure_capabilities{})
+				end
+
+			}
+
+
+
+
+		end
+	}
+
+
+
 }
