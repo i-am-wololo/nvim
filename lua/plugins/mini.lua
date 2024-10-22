@@ -60,8 +60,8 @@ return {
 			end
 			, desc = "open mini.files"
 			},
-			{"<leader>ff", "<cmd>Pick files <cr>"},
-			{"<leader>fg", "<cmd>Pick grep_live <cr>"}
+			{"<leader>fg", "<cmd>Pick grep_ive <cr>"},
+			{"<eader>ff", "<cmd>Pick file <cr>"}
 
 		},
 		config = function()

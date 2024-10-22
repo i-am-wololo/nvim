@@ -9,6 +9,9 @@ return {
 	  opts = {
 	    -- options
 	  },
+		lazy = false,
+		priority = 992
+
 	}
 
 }

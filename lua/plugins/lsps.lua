@@ -7,8 +7,8 @@ local servers = {
 	"emmet_language_server",
 	"ast_grep",
 	"rust_analyzer",
-	"tinymist"
-
+	"tinymist",
+	"mesonlsp",
 
 }
 
@@ -38,13 +38,25 @@ return {
 		end,
 
 		config = function()
-			coq = require("coq")
+			local coq = require("coq")
+			local lspconf = require("lspconfig")
 			require("mason").setup()
 			require("mason-lspconfig").setup(mason_lspconfig_opts)
-
 			require("mason-lspconfig").setup_handlers {
 				function (server_name)
-					require("lspconfig")[server_name].setup(coq.lsp_ensure_capabilities{})
+					lspconf[server_name].setup(coq.lsp_ensure_capabilities{})
+				end,
+
+				["tinymist"] = function ()
+					lspconf.tinymist.setup(coq.lsp_ensure_capabilities{
+						offset_encoding = "utf-8",
+						settings = {
+							exportPdf = "onType",
+							outputPath = "$root/$dir/target/$name"
+
+						}
+
+					})
 				end
 
 			}
@@ -54,7 +66,6 @@ return {
 
 		end
 	}
-
 
 
 }

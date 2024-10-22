@@ -5,7 +5,7 @@
   "coq_nvim": { "branch": "coq", "commit": "f1d2f27a322f41cb80802bacaa9377babead4662" },
   "fidget.nvim": { "branch": "main", "commit": "d855eed8a06531a7e8fd0684889b2943f373c469" },
   "gitsigns.nvim": { "branch": "main", "commit": "899e993850084ea33d001ec229d237bc020c19ae" },
-  "lackluster.nvim": { "branch": "main", "commit": "eb88754a5a3ad8ba7df342c81630600e801c4a42" },
+  "lackluster.nvim": { "branch": "main", "commit": "6d206a3af7dd2e8389eecebab858e7d97813fc0c" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
   "lazygit.nvim": { "branch": "main", "commit": "2432b447483f42ff2e18b2d392cb2bb27e495c08" },
   "lualine.nvim": { "branch": "master", "commit": "b431d228b7bbcdaea818bdc3e25b8cdbe861f056" },
