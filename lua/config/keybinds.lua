@@ -57,3 +57,5 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
 
 vim.keymap.set("i", "jk", "<ESC>")
+
+vim.keymap.set("t", "jk", '<C-\\><C-n>', { desc = 'Exit terminal mode' })

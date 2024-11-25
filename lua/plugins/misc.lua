@@ -22,6 +22,6 @@ return {
 		lazy = false,
 		priority = 992
 
-	}
+	},
 
 }

@@ -17,7 +17,7 @@ return {
 			},
 			{"<leader>fg", "<cmd>Pick grep_live <cr>"},
 			{"<leader>ff", "<cmd>Pick file <cr>"},
-			{"<leader>mk", function() MiniSessions.write(vim.fn.input("Session Name > ")) end}
+			{"<leader>mk", function() MiniSessions.write(vim.fn.input("Session Name > ")) end, desc="Create Session"}
 
 		},
 		config = function()

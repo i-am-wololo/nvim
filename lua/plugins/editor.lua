@@ -13,15 +13,16 @@ return {
 
 	{
 	    'nvim-lualine/lualine.nvim', priority = 911, opts = {options = {
-		    component_separators = {left = "", right = ""},
-		    section_separators = {left = "", right = ""}
-	    }},
+				component_separators = {left = "", right = ""},
+	     		   	section_separators = {left = "", right = ""},
+	    		},
+			theme = "lackluster"
+
+		},
 	    dependencies = { 'nvim-tree/nvim-web-devicons' },
 	    lazy = false,
-	    opts = {
-			options = {theme = "lackluster"}
-		}
 	},
+
 	 {
 	  "kdheepak/lazygit.nvim",
 	  cmd = {
@@ -58,11 +59,20 @@ return {
     	  local configs = require("nvim-treesitter.configs")
 
     	  configs.setup({
-    	      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "zig"},
+    	      ensure_installed = { "c", "lua", "vim", "vimdoc", "query",  "javascript", "html", "zig", "smali", "python"},
     	      sync_install = false,
     	      highlight = { enable = true },
     	      indent = { enable = true },
     	    })
     	end
  	},
+	{
+	 	"ray-x/lsp_signature.nvim",
+	 	event = "VeryLazy",
+	 	opts = {},
+	 	config = function(_, opts) require'lsp_signature'.setup(opts) end,
+		keys= {{"<Leader>k", function ()
+				vim.lsp.buf.signature_help()
+				     end, desc="Signatures"}}
+	}
 }
