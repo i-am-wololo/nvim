@@ -1,11 +1,7 @@
-vim.opt.clipboard="unnamed,unnamedplus"
+vim.opt.clipboard="unnamedplus"
 vim.wo.relativenumber = true
-
+vim.wo.number = true
 -- transparent
-vim.cmd [[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]]
 
+-- zls
+-- vim.g.zig_fmt_autosave = 0

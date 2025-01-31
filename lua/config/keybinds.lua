@@ -1,3 +1,4 @@
+vim.g.maplocalleader = "<Space>"
 
 -- moving window focus --
 vim.keymap.set({'n','v',},'<S-h>', '<C-w>h')
@@ -49,13 +50,14 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 -- Magic buffer-picking mode
 map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
 -- Sort automatically by...
-map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-map('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', opts)
-map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+-- map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
+-- map('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', opts)
+-- map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
+-- map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
+-- map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
 
 vim.keymap.set("i", "jk", "<ESC>")
 
 vim.keymap.set("t", "jk", '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+

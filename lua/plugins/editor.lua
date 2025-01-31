@@ -1,23 +1,26 @@
 
 return {
 	{
-    	"slugbyte/lackluster.nvim",
-    	lazy = false,
-    	priority = 1000,
-    	init = function()
-    	    vim.cmd.colorscheme("lackluster-night")
-    	    -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
-    	    -- vim.cmd.colorscheme("lackluster-mint")
-    	end,
-	},
+		"rebelot/kanagawa.nvim", lazy = false, priority = 1000,
+		opts = {
+			dimInactive = true,
+			background = {
+				dark = "dragon"
+			}
 
+
+		},
+		init = function()
+			vim.cmd("colorscheme kanagawa")
+		end
+
+	},
 	{
 	    'nvim-lualine/lualine.nvim', priority = 911, opts = {options = {
 				component_separators = {left = "", right = ""},
 	     		   	section_separators = {left = "", right = ""},
 	    		},
-			theme = "lackluster"
-
+			theme = "kanagawa"
 		},
 	    dependencies = { 'nvim-tree/nvim-web-devicons' },
 	    lazy = false,
@@ -59,20 +62,20 @@ return {
     	  local configs = require("nvim-treesitter.configs")
 
     	  configs.setup({
-    	      ensure_installed = { "c", "lua", "vim", "vimdoc", "query",  "javascript", "html", "zig", "smali", "python"},
+    	      ensure_installed = { "c", "lua", "vim", "vimdoc", "query",  "javascript", "html", "zig", "smali", "python", "typst"},
     	      sync_install = false,
     	      highlight = { enable = true },
     	      indent = { enable = true },
     	    })
     	end
  	},
-	{
-	 	"ray-x/lsp_signature.nvim",
-	 	event = "VeryLazy",
-	 	opts = {},
-	 	config = function(_, opts) require'lsp_signature'.setup(opts) end,
-		keys= {{"<Leader>k", function ()
-				vim.lsp.buf.signature_help()
-				     end, desc="Signatures"}}
-	}
+	-- {
+	--  	"ray-x/lsp_signature.nvim",
+	--  	event = "VeryLazy",
+	--  	opts = {},
+	--  	config = function(_, opts) require'lsp_signature'.setup(opts) end,
+	-- 	keys= {{"<Leader>k", function ()
+	-- 			vim.lsp.buf.signature_help()
+	-- 			     end, desc="Signatures"}}
+	-- }
 }

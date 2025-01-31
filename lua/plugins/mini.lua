@@ -16,7 +16,7 @@ return {
 			, desc = "open mini.files"
 			},
 			{"<leader>fg", "<cmd>Pick grep_live <cr>"},
-			{"<leader>ff", "<cmd>Pick file <cr>"},
+			{"<leader>ff", "<cmd>Pick files <cr>"},
 			{"<leader>mk", function() MiniSessions.write(vim.fn.input("Session Name > ")) end, desc="Create Session"}
 
 		},

@@ -14,12 +14,20 @@ else
   set shortmess=aoO
 endif
 badd +1 Starter
-badd +0 exercises/002_std.zig
+badd +14 exercises/002_std.zig
+badd +19 exercises/001_hello.zig
+badd +41 exercises/003_assignment.zig
+badd +186 term://~/ziglings.org//7979:/bin/zsh
+badd +30 exercises/004_arrays.zig
+badd +0 term://~/ziglings.org//4342:/bin/zsh
 argglobal
 %argdel
-edit exercises/002_std.zig
 argglobal
-balt Starter
+if bufexists(fnamemodify("term://~/ziglings.org//4342:/bin/zsh", ":p")) | buffer term://~/ziglings.org//4342:/bin/zsh | else | edit term://~/ziglings.org//4342:/bin/zsh | endif
+if &buftype ==# 'terminal'
+  silent file term://~/ziglings.org//4342:/bin/zsh
+endif
+balt exercises/004_arrays.zig
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -28,14 +36,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 28) / 57)
+let s:l = 87 - ((49 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 87
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -49,7 +55,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
